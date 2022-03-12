@@ -3,7 +3,7 @@
 namespace MyProject
 {
     /*
-    Project 040: Largest Number In Array
+    Project 057: Sort a array
     */
     class Program
     {
