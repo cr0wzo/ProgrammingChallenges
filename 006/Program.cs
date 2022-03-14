@@ -9,19 +9,20 @@ namespace MyProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose a move");    
+            Console.WriteLine("Moves");    
             Console.WriteLine("[1] Rock");
             Console.WriteLine("[2] Paper");
             Console.WriteLine("[3] Scissors");
+            Console.Write("Choice: ");
 
-            Moves[] movePool;
-            movePool[1] = Moves[new Random().Next(1, 4)];
+            Moves[] movePool = new Moves[2];
+            movePool[1] = (Moves) new Random().Next(1, 4);
 
             try
             {
-                movePool[0] = Moves[Convert.ToInt32(Console.ReadLine())];
+                movePool[0] = (Moves) Convert.ToInt32(Console.ReadLine());
 
-                if (move < 1 || move > 3)
+                if ((int) movePool[0] < 1 || (int) movePool[0] > 3)
                 {
                     throw new FormatException();
                 }
@@ -31,10 +32,10 @@ namespace MyProject
                 Environment.Exit(0);
             }
 
-            Console.WriteLine("You chose {0}, cpu chose {1}", nameof(movePool[0]), nameof(movePool[1]));
+            Console.WriteLine("You chose {0}, cpu chose {1}", Enum.GetName(typeof(Moves), movePool[0]), Enum.GetName(typeof(Moves), movePool[1]));
             if (movePool[0] == movePool[1])
             {
-                Console.WriteLine("Tie! you both picked {0}", nameof(movePool[0]));
+                Console.WriteLine("Tie! you both picked {0}", Enum.GetName(typeof(Moves), movePool[0]));
             } else if (movePool.Contains(Moves.Rock) && movePool.Contains(Moves.Paper))
             {
                 Console.WriteLine("Paper beats rock");
