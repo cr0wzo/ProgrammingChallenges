@@ -5,7 +5,7 @@
 003 - Calculate Your Age In Seconds <br>
 004 - Simple Encryption / Decryption <br>
 005 - FizzBuzz <br>
-006 - Rock Paper Scissors Lizard Spock <br>
+006 - Rock Paper Scissors <br>
 007 - HangMan <br>
 008 - LoveCalcuator <br>
 009 - Pseudorandom Quote Generator <br>
