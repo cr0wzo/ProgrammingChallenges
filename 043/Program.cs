@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MyProject
+﻿namespace MyProject
 {
     /*
     Project 043: Morse Code Shenanigans
